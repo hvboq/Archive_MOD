@@ -153,6 +153,73 @@
 
 	}
 	focus = {
+		id = TRM_catch_sister		#시스터후드의 장악
+		icon = GFX_goal_tmr_first_focus
+		cost = 5
+		prerequisite = {
+			focus = TRM_coup_detat
+		}
+		relative_position_id = TRM_coup_detat
+		cancelable = no
+		ai_will_do = {
+			factor = 100
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = TRM_great_fuck_end
+				add_idea = TRM_great_fuck_end_weak
+			}
+			hidden_effect = {
+				country_event = {
+					id = TRM_event.357
+					days = 7
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = TRM_focus_religion_same		#종교 일치 운동
+		icon = GFX_goal_tmr_first_focus
+		cost = 5
+		prerequisite = {
+			focus = TRM_catch_sister
+		}
+		relative_position_id = TRM_catch_sister
+		cancelable = no
+		ai_will_do = {
+			factor = 100
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = {
+				TRM_religion_same
+			}
+		}
+	}
+	focus = {
+		id = TRM_focus_add_war		#내전은 이겨야겠지?
+		icon = GFX_goal_tmr_first_focus
+		cost = 5
+		prerequisite = {
+			focus = TRM_catch_sister
+		}
+		relative_position_id = TRM_catch_sister
+		cancelable = no
+		ai_will_do = {
+			factor = 100
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			add_war_support = 0.20
+		}
+	}
+	focus = {
 		id = TRM_naechi # 내치
 		icon = GFX_goal_TRN_inside
 		cost = 8.00

@@ -21,6 +21,27 @@ ideas = {
 				can_join_factions = no
 			}
 		}
+		TRM_great_fuck_end_weak = { # 붕괴하는 트리니티 약화
+		picture = TRM_broken_icon
+		allowed = {
+			always = no
+		}
+		modifier = {
+			political_power_cost = 0.05
+			political_power_factor = -0.45
+			consumer_goods_factor = 0.50
+			stability_factor = -1.00
+			industrial_capacity_factory = -0.25
+			industrial_capacity_dockyard = -0.25
+			research_speed_factor = -1.00
+			war_support_factor = -1.00
+			disabled_ideas = 1
+		}
+		rule = { 
+			can_not_declare_war = yes 
+			can_join_factions = no
+		}
+	}
 		TRM_great_depression = { # 의견 대립
 			picture = TRM_broken_icon
 			allowed = {

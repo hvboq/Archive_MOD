@@ -1685,6 +1685,76 @@ TRM_kivotos_core_states = {
 		}
 	}
 }
+TRM_civilwar_categories = {
+	TRM_civil_war_defense = {
+		icon = generic_tank 
+		available = {
+			has_political_power > 30
+			has_completed_focus = TRM_catch_sister
+			OR = {
+				has_war_with = SIL
+				has_war_with = SAX
+			}
+			NOT = {
+				has_country_flag = FLAG_HAS_BEEN_OPPERATED_SIVILWAR_DEFENSE
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1000
+		}
+		visible = {
+			NOT = {
+				has_country_flag = FLAG_HAS_BEEN_OPPERATED_SIVILWAR_DEFENSE
+			}
+		}
+		allowed = {
+		}
+		cost = 30
+		days_remove = 10
+		days_re_enable = 60
+		modifier = {
+			army_core_defence_factor = 0.1
+		}
+		remove_effect = {
+			# set_country_flag = FLAG_HAS_BEEN_OPPERATED_SIVILWAR_DEFENSE
+		}
+	}
+	TRM_civil_war_attack = {
+		icon = generic_tank 
+		available = {
+			has_political_power > 30
+			has_completed_focus = TRM_catch_sister
+			OR = {
+				has_war_with = SIL
+				has_war_with = SAX
+			}
+			NOT = {
+				has_country_flag = FLAG_HAS_BEEN_OPPERATED_SIVILWAR_DEFENSE
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1000
+		}
+		visible = {
+			NOT = {
+				has_country_flag = FLAG_HAS_BEEN_OPPERATED_SIVILWAR_DEFENSE
+			}
+		}
+		allowed = {
+		}
+		const = 30
+		days_remove = 10
+		days_re_enable = 60
+		modifier = {
+			army_core_attack_factor = 0.1
+		}
+		remove_effect = {
+			# set_country_flag = FLAG_HAS_BEEN_OPPERATED_SIVILWAR_DEFENSE
+		}
+	}
+}
 ARI_Trinity_core_states_catagories = {
 	ARI_Trinity_core_states_decisions = {
 		allowed = {
